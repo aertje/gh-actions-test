@@ -3,11 +3,11 @@ on:
   push:
 jobs:
   test-job:
-  runs-on: ubuntu-latest
-  services: 
-    test-emulator:
-      image: ghcr.io/aertje/cloud-tasks-emulator:latest
-      ports: 8123:8123
-  steps:
-    - name: Start emulator
-      run: ./emulator --host 1.2.3.4 --port 8123
+    runs-on: ubuntu-latest
+    services: 
+      test-emulator:
+        image: ghcr.io/aertje/cloud-tasks-emulator:latest
+        ports: 8123:8123
+    steps:
+      - name: Start emulator
+        run: ./emulator --host 1.2.3.4 --port 8123
