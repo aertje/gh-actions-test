@@ -10,8 +10,7 @@ jobs:
         ports: 
           - 8123:8123
         options: >-
-          --host 1.2.3.4
-          --port 1234
+          --entrypoint "./emulator --host 1.2.3.4"
     steps:
       - name: Show pwd
         run: pwd
