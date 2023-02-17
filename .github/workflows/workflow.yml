@@ -9,8 +9,7 @@ jobs:
         image: ghcr.io/aertje/cloud-tasks-emulator:latest
         ports: 
           - 8123:8123
-        options: >-
-          ./emulator --host 1.2.3.4
+        options: --entrypoint "./emulator_from_env.sh"
     steps:
       - name: Show pwd
         run: pwd
