@@ -9,10 +9,9 @@ jobs:
         image: ghcr.io/aertje/cloud-tasks-emulator:latest
         ports: 
           - 8123:8123
+        options: >-
+          -- host 1.2.3.4
+          -- port 1234
     steps:
       - name: Show pwd
         run: pwd
-      - name: Show ls
-        run: ls -al
-      - name: Start emulator
-        run: ./emulator --host 1.2.3.4 --port 8123
